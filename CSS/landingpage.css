@@ -1,0 +1,244 @@
+/* Tags */
+body {
+  background-color: var(--main-color-lowlight);
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+/* Classes and IDs */
+#MainTitle {
+  font-size: larger;
+}
+
+#Nav {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font-size: 0;
+}
+
+.NavButton {
+  width: 20%;
+  height: 100%;
+  margin: 0px;
+  color: var(--main-color-highlight);
+  border: 0px;
+  background-color: var(--main-color-lowlight);
+  transition: 0.4s;
+  margin-left: 10%;
+  margin-right: 10%;
+  animation: highlight 0.25s 1;
+  animation-fill-mode: forwards;
+}
+
+.unlit {
+  animation-name: none;
+}
+
+#Projects {
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+#projectPage, #aboutPage, #contactPage {
+  margin-top: 1%;
+  position: absolute;
+  text-align: center;
+  height: 70%;
+  overflow: hidden;
+  width: 100%;
+}
+
+#aboutWrapper {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+}
+
+#aboutWrapper h2 {
+  color: var(--main-color-highlight);
+}
+
+#aboutWrapper p {
+  color: var(--main-color-midlight);
+  padding-left: 2em;
+}
+
+#projectReel {
+  height: 100%;
+  text-align: center;
+  width: 80%;
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.projectReelItem {
+  height: 100%;
+  width: 30%;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  text-align: center;
+}
+
+.projectContainer {
+  margin: auto;
+  height: 90%;
+  width: 90%;
+  background-color: var(--main-color-lowshade);
+  border-radius: 2%;
+  overflow: hidden;
+  transition: width 0.3s, height 0.3s;
+}
+.projectContainer:hover {
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color-midshade);
+}
+
+.projectImage {
+  aspect-ratio: 1/1;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.projectTitle {
+  color: var(--main-color-highlight);
+  font-size: large;
+}
+
+.projectDescription {
+  color: var(--main-color-highlight);
+}
+
+#AboutMe.draw-border {
+  box-shadow: inset 0 0 0 4px var(--main-color-lowlight);
+  position: relative;
+}
+#AboutMe.draw-border::before, #AboutMe.draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+#AboutMe.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+#AboutMe.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+#AboutMe.draw-border:hover::before, #AboutMe.draw-border:hover::after {
+  border-color: var(--main-color-highlight);
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+#AboutMe.draw-border:hover::before {
+  transition-delay: 0s, 0s, 0.25s;
+}
+#AboutMe.draw-border:hover::after {
+  transition-delay: 0s, 0.25s, 0s;
+}
+
+#Projects.draw-border {
+  box-shadow: inset 0 0 0 4px var(--main-color-lowlight);
+  position: relative;
+  /*&::after {
+      border-top-width: $width;
+  }*/
+}
+#Projects.draw-border::before, #Projects.draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  bottom: 50%;
+  left: 0;
+}
+#Projects.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+  border-right-width: 4px;
+}
+#Projects.draw-border:hover::before, #Projects.draw-border:hover::after {
+  border-color: var(--main-color-highlight);
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  bottom: 0%;
+  height: 100%;
+}
+#Projects.draw-border:hover::before {
+  transition-delay: 0s, 0s, 0.25s;
+}
+#Projects.draw-border:hover::after {
+  transition-delay: 0, 0.25s, 0.25s;
+  border-top-width: 4px;
+}
+
+#Contact.draw-border {
+  box-shadow: inset 0 0 0 4px var(--main-color-lowlight);
+  position: relative;
+}
+#Contact.draw-border::before, #Contact.draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  left: 0;
+}
+#Contact.draw-border::before {
+  border-bottom-width: 4px;
+  border-right-width: 4px;
+}
+#Contact.draw-border::after {
+  border-top-width: 4px;
+  border-left-width: 4px;
+}
+#Contact.draw-border:hover::before, #Contact.draw-border:hover::after {
+  border-color: var(--main-color-highlight);
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+#Contact.draw-border:hover::before {
+  transition-delay: 0s, 0s, 0.25s;
+}
+#Contact.draw-border:hover::after {
+  transition-delay: 0s, 0.25s, 0s;
+}
+
+/* Animations */
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes highlight {
+  0% {
+    background-color: var(--main-color-lowlight);
+    color: var(--main-color-highlight);
+    font-weight: normal;
+  }
+  100% {
+    background-color: var(--main-color-highlight);
+    color: var(--main-color-lowlight);
+    font-weight: bold;
+  }
+}/*# sourceMappingURL=landingpage.css.map */

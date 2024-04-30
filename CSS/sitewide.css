@@ -1,0 +1,22 @@
+:root {
+    --main-color-highlight: bisque;
+    --main-color-midlight: rgb(117, 88, 53);
+    --main-color-lowlight: #121212;
+    --main-color-midshade: #454545;
+    --main-color-lowshade: #282828;
+}
+
+h1, h2, h3, p {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color:blanchedalmond;
+}
+
+.HoverText {
+    color: antiquewhite;
+}
+
+.HoverText:hover {color:blueviolet;}
