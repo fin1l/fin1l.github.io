@@ -60,6 +60,18 @@ body {
 
 #aboutWrapper h2{
     color: var(--main-color-highlight);
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: var(--main-color-lowshade);
+    border-radius: 1% / 30%;
+}
+
+#aboutWrapper h3{
+    color: var(--main-color-highlight);
+    padding-left: 1em;
+    line-height: 0em;
 }
 
 #aboutWrapper p{
